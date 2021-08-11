@@ -53,7 +53,7 @@ The details of mUBQP are described in:
 As mentioned earlier, this program requires MPI tool like MPICH. To install MPICH and verify the installation:
 ```
 sudo apt-get install mpich
-mpiexec --version
+which mpic++
 ```
 
 CMakeLists.txt has been provided for compiling the program by cmake, so better make sure that cmake has been installed. However, cmake is not compulsory, you can also compile the program without cmake. We will show the commands in the next section.
@@ -82,7 +82,7 @@ mpic++  -o  pplsd  -O2  main.cpp  problem.cpp  solution.cpp  archive.cpp  misc.c
 
 ## How to use it
 
-You can run the program by the 'mpiexec' command of MPICH (for OpenMPI, the command is 'mpirun'):
+You can run the program by the 'mpiexec' command of MPICH:
 
 ```
 mpiexec -n <process_num> ./pplsd  <problem_filename>  <weight_vector_filename>   <max_runtime>
